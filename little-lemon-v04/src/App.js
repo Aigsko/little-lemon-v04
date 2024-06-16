@@ -10,7 +10,7 @@ import ABOUT from "./components/About";
 import FOOTER from "./components/Footer";
 import HOME from "./components/Home";
 import MENU from "./components/Menu";
-import RESERVATIONS from "./components/Reservations";
+import RESERVATIONS from "./components/BookingForm";
 import ORDERONLINE from "./components/OrderOnline";
 import LOGIN from "./components/Login";
 
@@ -37,7 +37,7 @@ function App() {
 					/>
 
           <Route
-						path="/reservations"
+						path="/bookingform"
 						element={<RESERVATIONS />}
 					/>
 

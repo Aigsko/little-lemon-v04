@@ -1,38 +1,36 @@
-import React, { useState } from "react";
-/*import './css/BookingForm.css';*/
+import React, { useState,} from 'react';
 import { Link } from 'react-router-dom';
 
+const BookingForm = () => {
+  const [date, setDate] = useState();
+  const [time, setTime] = useState("17:00");
+  const [guests, setGuests] = useState("2");
+  const [occasion, setOccasion] = useState("Birthday");
 
-function BookingForm() {
-   const [date, setDate] = useState();
-   const [time, setTime] = useState("17:00");
-   const [guests, setGuests] = useState("2");
-   const [occasion, setOccasion] = useState("Birthday");
+  const handleConfirm = () => {
+    let result = [`Date:  ${date} Time: ${time} Guests: ${guests} Occasion: ${occasion} `];
+    if (date !== undefined) {
+      const confirmationUrl = `/ConfirmationPage/${result}`;
+      return confirmationUrl;
+    }
+  }
 
-   const handleSubmit = (e) => {
-      e.preventDefault();
-
-      if (date !== undefined) {
-      /*alert(`Date: ${date},
-Time: ${time},
-Guests: ${guests},
-Occasion: ${occasion}`);*/ document.getElementById("alert").innerHTML = "pasÅ«tÄ«ts!";} else {/*alert("Please enter a date!");*/ document.getElementById("alert").innerHTML = "Please enter a date!";}
-   };
-
-   return (
-      <>
-      <div id="alert"></div>
-      <form className="bookingform" onSubmit={handleSubmit}>
-         <section className="field-date">
+  return (
+    <>
+      <h1>Order Page</h1>
+      <form className="bookingform" >
+          <section className="field-date">
             <label>Booking date</label>
             <input
                type="date"
                value={date}
-               onChange={(e) => { setDate(e.target.value); document.getElementById("alert").innerHTML = " ";}}
-               placeholder="res-date" />
+               onChange={(e) => { setDate(e.target.value);}}
+               placeholder="res-date"
+               required />
          </section>
          <br />
-         <section className="field-time">
+
+          <section className="field-time">
             <label>Booking time</label>
             <select
                value={time}
@@ -51,7 +49,8 @@ Occasion: ${occasion}`);*/ document.getElementById("alert").innerHTML = "pasÅ«tÄ
             </select>
          </section>
          <br />
-         <section className="field-numguests">
+
+         <section className="field-guests">
             <label>Number of guests</label>
             <input
                type="number"
@@ -62,6 +61,7 @@ Occasion: ${occasion}`);*/ document.getElementById("alert").innerHTML = "pasÅ«tÄ
                placeholder="2" />
          </section>
          <br />
+
          <section className="field-occasion">
             <label>Occasion</label>
             <select
@@ -69,23 +69,20 @@ Occasion: ${occasion}`);*/ document.getElementById("alert").innerHTML = "pasÅ«tÄ
                onChange={(e) => setOccasion(e.target.value)}>
                <option value="Birthday">Birthday</option>
                <option value="Anniversary">Anniversary</option>
+               <option value="Wedding">Wedding</option>
                <option value="Other">Other</option>
             </select>
          </section>
          <br />
-         <section className="field-email">
-            <label>Your email</label>
-            <input type="email" placeholder="youremailhere@mail.com" />
-         </section>
-         <br />
-         
-         <section className="submit">
-            
-            <button className="reserve-submit" type="submit">Make your reservation</button>
-            <Link to="/"><button className="booking-button">Book a table</button></Link>
+
+          <section className="submit">
+            <Link to={handleConfirm()}>
+              <button >Confirm Order</button>
+            </Link>
          </section>
       </form>
-      </>
-   )
-}
+    </>
+  );
+};
+
 export default BookingForm;

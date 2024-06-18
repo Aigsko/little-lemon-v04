@@ -13,6 +13,7 @@ import MENU from "./components/Menu";
 import RESERVATIONS from "./components/BookingForm";
 import ORDERONLINE from "./components/OrderOnline";
 import LOGIN from "./components/Login";
+import CONFIRMATIONPAGE from "./components/ConfirmationPage";
 
 function App() {
 	return (
@@ -36,19 +37,24 @@ function App() {
 						element={<MENU />}
 					/>
 
-          <Route
+          			<Route
 						path="/bookingform"
 						element={<RESERVATIONS />}
 					/>
 
-          <Route
+          			<Route
 						path="/orderonline"
 						element={<ORDERONLINE />}
 					/>
 
-          <Route
+          			<Route
 						path="/login"
 						element={<LOGIN />}
+					/>
+
+					<Route
+						path="/ConfirmationPage/:result"
+						element={<CONFIRMATIONPAGE />}
 					/>
 
 					<Route

@@ -14,6 +14,7 @@ import RESERVATIONS from "./components/BookingForm";
 import ORDERONLINE from "./components/OrderOnline";
 import LOGIN from "./components/Login";
 import CONFIRMATIONPAGE from "./components/ConfirmationPage";
+import UNDERCONSTRUCTION from "./components/UnderConstruction";
 
 function App() {
 	return (
@@ -55,6 +56,11 @@ function App() {
 					<Route
 						path="/ConfirmationPage/:result"
 						element={<CONFIRMATIONPAGE />}
+					/>
+
+                    <Route
+						path="/undercostruction"
+						element={<UNDERCONSTRUCTION />}
 					/>
 
 					<Route

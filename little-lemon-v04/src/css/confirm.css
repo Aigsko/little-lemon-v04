@@ -1,0 +1,35 @@
+.confirm-title {
+    font-family: "Markazi Text", sans-serif;
+    color: #495E57;
+    font-size: 3em;
+    text-align: center;
+    
+}
+
+.confirm-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.confirm-container {
+   
+    text-align: center;
+    background-color: #495E57;
+    width: 300px;
+    padding: 40px 0px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.confirm-text {
+    font-family: Karla, sans-serif;
+    color: #EDEFEE;
+    letter-spacing: 2px;
+    line-height: 2;
+    margin: 20px;
+}
+

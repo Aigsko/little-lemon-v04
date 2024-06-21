@@ -1,0 +1,32 @@
+.booking-title {
+    font-family: "Markazi Text", sans-serif;
+    color: #495E57;
+    font-size: 3em;
+    text-align: center;
+}
+
+.bookingform {
+    text-align: center;
+    background-color: #495E57;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.field-date, .field-time, .field-guests, .field-occasion {
+    font-family: Karla, sans-serif;
+    color: #EDEFEE;
+    font-size: larger;
+}
+
+.field-date input, .field-time select, .field-guests input, .field-occasion select {
+    width: 50%;
+    min-width: 160px;
+    border-radius: 10px;
+    font-family: Karla, sans-serif;
+    font-size: larger;
+}

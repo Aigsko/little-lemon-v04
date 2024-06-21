@@ -1,5 +1,6 @@
 import React, { useState,} from 'react';
 import { Link } from 'react-router-dom';
+import "../css/booking.css";
 
 const BookingForm = () => {
   const [date, setDate] = useState();
@@ -8,7 +9,7 @@ const BookingForm = () => {
   const [occasion, setOccasion] = useState("Birthday");
 
   const handleConfirm = () => {
-    let result = [`Date:  ${date} Time: ${time} Guests: ${guests} Occasion: ${occasion} `];
+    let result = [`Date:   ${date} Time:   ${time} Guests:   ${guests} Occasion:   ${occasion} `];
     if (date !== undefined) {
       const confirmationUrl = `/ConfirmationPage/${result}`;
       return confirmationUrl;
@@ -17,10 +18,10 @@ const BookingForm = () => {
 
   return (
     <>
-      <h1>Order Page</h1>
+    <h1 className='booking-title'>Rezervations</h1>
       <form className="bookingform" >
           <section className="field-date">
-            <label>Booking date</label>
+            <label>Booking date<br /></label>
             <input
                type="date"
                value={date}
@@ -31,7 +32,7 @@ const BookingForm = () => {
          <br />
 
           <section className="field-time">
-            <label>Booking time</label>
+            <label>Booking time<br /></label>
             <select
                value={time}
                onChange={(e) => setTime(e.target.value)}>
@@ -51,7 +52,7 @@ const BookingForm = () => {
          <br />
 
          <section className="field-guests">
-            <label>Number of guests</label>
+            <label>Number of guests<br /></label>
             <input
                type="number"
                min="1"
@@ -63,7 +64,7 @@ const BookingForm = () => {
          <br />
 
          <section className="field-occasion">
-            <label>Occasion</label>
+            <label>Occasion<br /></label>
             <select
                value={occasion}
                onChange={(e) => setOccasion(e.target.value)}>
@@ -76,8 +77,8 @@ const BookingForm = () => {
          <br />
 
           <section className="submit">
-            <Link to={handleConfirm()}>
-              <button >Confirm Order</button>
+            <Link to={handleConfirm()} className='button'>
+              Confirm Order
             </Link>
          </section>
       </form>

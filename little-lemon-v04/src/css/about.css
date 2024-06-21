@@ -1,0 +1,55 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 10vw 40px 10vw;
+}
+
+.about-text {
+    width: 50%;
+    min-width: 400px;
+    margin-right: 10vw;
+}
+
+.about-text h1 {
+    font-family: "Markazi Text", sans-serif;
+    color: #495E57;
+    font-size: 2.5em;
+}
+
+.about-text h3 {
+    font-family: "Markazi Text", sans-serif;
+    color: #EE9972;
+    font-size: 1.5em;
+}
+
+.about-text p {
+    font-family: Karla, sans-serif;
+    color: #495E57;
+}
+
+.about-images {
+    width: 250px;
+    height: 400px;
+    position: relative;
+    margin-top: auto;
+    float:right;
+}
+
+.about-images img{
+    width: 200px;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.img2 {
+   position: absolute;
+   left: 50px;
+   top: 0em;
+}
+
+.img1 {
+    position: absolute;
+    left: 0px;
+    bottom: 0em;
+}

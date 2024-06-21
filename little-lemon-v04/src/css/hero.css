@@ -1,0 +1,57 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: #495E57;
+    height: 300px;
+    background-image: 'url("../Assets/restauranfood.jpg")';
+}
+
+.text-block {
+    width: 210px;
+    /*text-align: left;*/
+}
+
+.text-block h1 {
+    font-family: "Markazi Text", sans-serif;
+    color: #F4CE14;
+    font-weight: 300;
+    font-size: 3em;
+    margin-top: 50px;
+    line-height: 0;
+}
+
+.text-block h2 {
+    font-family: "Markazi Text", sans-serif;
+    color: #EDEFEE;
+    font-weight: 300;
+    line-height: 0;
+}
+
+.text-block p {
+    font-family: Karla, sans-serif;
+    color: #EDEFEE;
+    margin-top: 40px;
+}
+
+
+
+.imgHero {
+    width: 30%;
+    max-width: 300px;
+    margin-top: 40px;
+   
+}
+
+.imgHero img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+@media screen and (max-width: 450px) {
+    .imgHero {
+        display: none;
+    }
+}

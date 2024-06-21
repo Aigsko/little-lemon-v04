@@ -1,7 +1,7 @@
 const OrderOnline = () => {
     return (
         <div>
-            <h1>Order Online Page</h1>
+            <h1>Under Construction</h1>
         </div>
     );
 };

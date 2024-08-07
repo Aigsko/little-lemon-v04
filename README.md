@@ -1,4 +1,4 @@
-Meta Front-End Developer Professional Certificate course capstone project - Peer-graded Assignment: Booking a table on the Little Lemon website.
+Meta Front-End Developer Professional Certificate course capstone React project - Peer-graded Assignment: Booking a table on the Little Lemon website.
 
 Open codespace
 Go to little-lemon-v04 directory
